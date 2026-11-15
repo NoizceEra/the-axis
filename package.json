@@ -1,0 +1,11 @@
+{
+  "name": "the-axis",
+  "private": true,
+  "type": "module",
+  "version": "1.0.0",
+  "description": "THE AXIS — Game 1: The Trembling. A zero-build top-down RPG in the browser.",
+  "scripts": {
+    "start": "python -m http.server 8080",
+    "validate": "node tools/validate.mjs"
+  }
+}

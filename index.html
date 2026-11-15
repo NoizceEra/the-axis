@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>THE AXIS — Game 1: The Trembling</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#1b2118">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="description" content="A short top-down RPG: the ground is shaking, and the supports that keep the world steady are failing.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="stage">
+
+  <canvas id="game" width="320" height="208" aria-label="The Axis — game view"></canvas>
+
+  <!-- HUD -->
+  <header id="hud">
+    <div class="hud-left">
+      <span id="place">Ashhollow</span>
+      <span id="objective" class="objective"></span>
+    </div>
+    <div class="hud-right">
+      <div class="stress-wrap" title="Axis stress">
+        <span class="stress-label">AXIS</span>
+        <div class="meter"><i id="stressbar"></i></div>
+      </div>
+      <div id="tokens" class="tokens"></div>
+    </div>
+  </header>
+
+  <!-- Dialogue -->
+  <div id="dialogue" hidden>
+    <div id="dbox">
+      <div id="dname"></div>
+      <div id="dtext"></div>
+      <div id="dchoices" hidden></div>
+      <div id="dmore" class="more">▼</div>
+    </div>
+  </div>
+
+  <!-- Toast / ambient log -->
+  <div id="toast" hidden></div>
+
+  <!-- Picture overlay (caretaker, cross-sections, ending stills) -->
+  <div id="picture" hidden>
+    <canvas id="piccanvas" width="240" height="144"></canvas>
+    <div id="pictitle"></div>
+    <div id="picclose" class="more">▼</div>
+  </div>
+
+  <!-- Title screen -->
+  <div id="title">
+    <div class="title-inner">
+      <h1>THE AXIS</h1>
+      <h2>Game 1 — The Trembling</h2>
+      <p class="blurb">The ridge has always spoken. Lately it only groans.</p>
+      <label class="name-row">
+        <span>Name</span>
+        <input id="name-input" maxlength="14" spellcheck="false" autocomplete="off" value="Wren">
+      </label>
+      <div class="title-buttons">
+        <button id="btn-new">New game</button>
+        <button id="btn-continue">Continue</button>
+      </div>
+      <p class="hint">Arrows / WASD to move · Z or Enter to interact · X or Esc for menu</p>
+    </div>
+  </div>
+
+  <!-- Pause menu -->
+  <div id="menu" hidden>
+    <div class="menu-panel">
+      <h3>Satchel</h3>
+      <ul id="menu-items"></ul>
+      <div class="menu-stats" id="menu-stats"></div>
+      <div class="menu-buttons">
+        <button id="menu-save">Save</button>
+        <button id="menu-load">Load</button>
+        <button id="menu-sound">Sound: on</button>
+        <button id="menu-close">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ending -->
+  <div id="ending" hidden>
+    <div class="ending-panel">
+      <h2>THE AXIS — <span id="ending-title"></span></h2>
+      <p id="ending-body"></p>
+      <p class="epilogue">Game 1 ends here. The supports, the keepers, and what came through are Game 2’s problem.</p>
+      <button id="ending-restart">Play again</button>
+    </div>
+  </div>
+
+  <!-- Touch controls -->
+  <div id="touch">
+    <div id="dpad">
+      <button class="dbtn up" data-dir="up" aria-label="up">▲</button>
+      <button class="dbtn left" data-dir="left" aria-label="left">◀</button>
+      <button class="dbtn right" data-dir="right" aria-label="right">▶</button>
+      <button class="dbtn down" data-dir="down" aria-label="down">▼</button>
+    </div>
+    <div id="abuttons">
+      <button id="btn-menu" aria-label="menu">MENU</button>
+      <button id="btn-a" aria-label="interact">A</button>
+    </div>
+  </div>
+
+</div>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

@@ -1,6 +1,11 @@
 # THE AXIS — Game 1: The Trembling
 
+**Play: https://noizceera.github.io/the-axis/**
+
+
 A complete, playable short RPG built from `Axis_Mundi_Game1_Deep_Dive.pdf`.
+An RPG Maker MZ port of the same content lives in `../the-axis-mz`
+(play: https://noizceera.github.io/the-axis-mz/).
 Zero build step, zero dependencies: open `index.html` (or serve the folder) and play.
 
 > The ridge has always spoken. Lately it only groans.
